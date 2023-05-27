@@ -1,6 +1,6 @@
 {
   "name": "serverless-esbuild-prisma",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Serverless plugin that embeds schema.prisma to serverless functions .zip files",
   "main": "dist/index.js",
   "scripts": {
