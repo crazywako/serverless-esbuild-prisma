@@ -1,0 +1,19 @@
+{
+  "name": "serverless-esbuild-prisma",
+  "version": "1.0.0",
+  "description": "Serverless plugin that embeds schema.prisma to serverless functions .zip files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crazywako/serverless-esbuild-prisma.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crazywako/serverless-esbuild-prisma/issues"
+  },
+  "homepage": "https://github.com/crazywako/serverless-esbuild-prisma#readme"
+}
