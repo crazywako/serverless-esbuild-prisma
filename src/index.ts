@@ -41,7 +41,7 @@ class ServerlessEsbuildPrisma {
       }
     };
     this.hooks = {
-      'before:package:finalize': this.onBeforePackageFinalize.bind(this),
+      'after:package:createDeploymentArtifacts': this.onBeforePackageFinalize.bind(this),
     };
   }
 
@@ -64,9 +64,9 @@ class ServerlessEsbuildPrisma {
       const functionPath = splitFunctionPath.join('/');
       const zipFileName= join('./.serverless/', functionName + ".zip");
       let zip = new admZip(fs.readFileSync(zipFileName))
-      zip.addFile(`${functionPath}/prisma/schema.prisma`, fs.readFileSync(join(prismaPath, "schema.prisma")));
+      zip.addFile(`${functionPath}/schema.prisma`, fs.readFileSync(join(prismaPath, "schema.prisma")));
       enginePaths.forEach((enginePath: string) => {
-        zip.addFile(`${functionPath}/prisma/${path.basename(enginePath)}`, fs.readFileSync(enginePath));
+        zip.addFile(`${functionPath}/${path.basename(enginePath)}`, fs.readFileSync(enginePath));
       })
       zip.writeZip(zipFileName);
     }
