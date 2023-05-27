@@ -12,7 +12,7 @@ Big thanks to @danieluhm2004 for the inspiration.
 First, install the package by entering the following command.
 
 ```sh
-npm install -D serverless-esbuild-prisma
+npm install serverless-esbuild-prisma --save-dev
 ```
 
 Add the corresponding plugin under the Serverless config file as shown below.
